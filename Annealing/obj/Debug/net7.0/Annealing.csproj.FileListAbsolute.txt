@@ -1,0 +1,15 @@
+/home/gokop/RiderProjects/Annealing/bin/Debug/net7.0/Annealing
+/home/gokop/RiderProjects/Annealing/bin/Debug/net7.0/Annealing.deps.json
+/home/gokop/RiderProjects/Annealing/bin/Debug/net7.0/Annealing.runtimeconfig.json
+/home/gokop/RiderProjects/Annealing/bin/Debug/net7.0/Annealing.dll
+/home/gokop/RiderProjects/Annealing/bin/Debug/net7.0/Annealing.pdb
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.csproj.AssemblyReference.cache
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.GeneratedMSBuildEditorConfig.editorconfig
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.AssemblyInfoInputs.cache
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.AssemblyInfo.cs
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.csproj.CoreCompileInputs.cache
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.dll
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/refint/Annealing.dll
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.pdb
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/Annealing.genruntimeconfig.cache
+/home/gokop/RiderProjects/Annealing/obj/Debug/net7.0/ref/Annealing.dll
