@@ -39,11 +39,14 @@ public class Schedule
     {
         var alreadyAddedJobTime = jobLookup[job];
         if (alreadyAddedJobTime is not null) return (int) alreadyAddedJobTime;
-        
-        int requiredJobEndTime = -1;
-        if (job.RequiredJob is not null)
+
+        List<int> requiredJobEndTimes = new List<int>();
+        if (job.RequiredJobs.Count > 0)
         {
-            requiredJobEndTime = AddJob(job.RequiredJob);
+            foreach (var requiredJob in job.RequiredJobs)
+            {
+                requiredJobEndTimes.Add(AddJob(requiredJob));
+            }
         }
 
         var ignoredProcessors = new List<int>();
@@ -66,7 +69,7 @@ public class Schedule
                 }
             }
 
-            if (chosenProcessorTime < requiredJobEndTime)
+            if (requiredJobEndTimes.Any(t => chosenProcessorTime < t))
             {
                 ignoredProcessors.Add(chosenProcessor);
                 chosenProcessor = -1;

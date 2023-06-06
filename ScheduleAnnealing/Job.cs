@@ -5,13 +5,13 @@ public class Job
     public int Id { get; }
     // czas/koszt zadania
     public int Duration { get; }
-    // zadanie wymagające tego zadania
-    public Job? RequiredJob { get; set; }
+    // zadania wymagane przez to zadanie
+    public List<Job> RequiredJobs { get; set; }
 
     public Job(int id, int duration)
     {
         Id = id;
         Duration = duration;
-        RequiredJob = null;
+        RequiredJobs = new List<Job>();
     }
 }

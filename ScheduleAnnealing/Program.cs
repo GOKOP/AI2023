@@ -20,7 +20,7 @@ Job[] readJobs(string filePath)
         int[] indices = line.Split(' ').Select(s => Int32.Parse(s)).ToArray();
         if (indices.Length != 2) throw new ArgumentException("Bad contents of the input file");
 
-        jobs[indices[0]].RequiredJob = jobs[indices[1]];
+        jobs[indices[0]].RequiredJobs.Add(jobs[indices[1]]);
     }
 
     return jobs;
