@@ -2,13 +2,20 @@
 
 using ScheduleAnnealing;
 
+int processorCount = 5;
 Random rng = new Random();
 
 var jobs = readJobs("jobs.txt");
-var schedule = Schedule.NewRandom(rng, jobs, 5);
-var bestSchedule = Annealing.SimulateAnnealing(rng, schedule, 5);
 
-printSchedule(bestSchedule);
+var schedule = Schedule.NewRandom(rng, jobs, processorCount);
+var bestAnnealing = Annealing.SimulateAnnealing(rng, schedule, 2);
+Console.WriteLine("Simulated annealing:");
+printSchedule(bestAnnealing);
+
+var genetic = new GeneticSolver(processorCount);
+var bestGenetic = genetic.FindBestSchedule(jobs);
+Console.WriteLine("Genetic algorithm:");
+printSchedule(bestGenetic);
 
 Job[] readJobs(string filePath)
 {

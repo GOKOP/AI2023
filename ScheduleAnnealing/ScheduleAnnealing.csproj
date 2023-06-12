@@ -14,6 +14,13 @@
       <None Update="manyjobs.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="generatedjobs.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GAF" Version="2.3.1" />
     </ItemGroup>
 
 </Project>

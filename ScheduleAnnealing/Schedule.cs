@@ -122,4 +122,15 @@ public class Schedule
 
         return newSchedule;
     }
+
+    // bierze zadania w określonej kolejności i tworzy według nich harmonogram
+    public static Schedule NewFromJobs(IEnumerable<Job> jobs, int processorCount)
+    {
+        var newSchedule = new Schedule(processorCount);
+        foreach (var job in jobs)
+        {
+            newSchedule.AddJob(job);
+        }
+        return newSchedule;
+    }
 }

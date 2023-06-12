@@ -13,6 +13,8 @@ public static class Annealing
         return Schedule.NewInNeighborhood(rng, currentSolution, neighbourhoodWidth);
     }
 
+    // Decyzja czy zaakceptować rozwiązanie, na podstawie metropolis condition
+    // (zawsze akceptuje lepsze rozwiązania, gorsze akceptuje według temperatury)
     static bool MetropolisCondition(Random rng, Schedule oldSolution, Schedule newSolution, float temperature)
     {
         float difference = ObjectiveFunction(newSolution) - ObjectiveFunction(oldSolution);
@@ -30,6 +32,7 @@ public static class Annealing
         var incumbentSolution = initialSolution;
         float temperature = 10;
 
+        // temperatureLength kontroluje prędkość z jaką spada temperatura
         int temperatureLength = 10;
         int tempLengthIterations = 0;
 
